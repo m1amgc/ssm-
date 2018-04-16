@@ -1,0 +1,5 @@
+1、首先先在resources文件下创建3个目录，分别是conf、mybatis、spring。
+2、然后在conf目录下创建db.properties文件，在mybatis目录下创建SqlMapConfig.xml文件，在spring目录下创建applicationContext-dao.xml、
+  applicationContext-service.xml、applicationContext-trans.xml、springmvc.xml文件，最后修改WEB-INF目录下的web.xml
+3、service包是创建在interface和service的model下的，interface创建的是service，而service创建的是service.impl，controller包则是创建在web的model中，
+  mapper是创建在dao中
