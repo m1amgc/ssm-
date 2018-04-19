@@ -1,0 +1,15 @@
+如果框架的第一次测试时出现了500错误，那么有可能是DAO项目下缺少了.xml文件，就是.xml文件和mapper文件不在同一个包下，这时，就需要在DAO的pom.xml文件下
+添加代码，告诉项目.xml文件在哪
+<!-- 如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 -->
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
